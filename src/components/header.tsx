@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { cn } from "~/lib/utils";
 import { useScroll } from "~/hooks/use-scroll";
-import Logo from "./svgs/logo";
 
 export default function Header() {
 	const scrolled = useScroll();
@@ -15,8 +14,8 @@ export default function Header() {
 				scrolled && "bg-background/80 backdrop-blur-sm",
 			)}
 		>
-			<Link href="/" className="cursor-pointer">
-				<Logo />
+			<Link href="/" className="text-xl font-bold tracking-tight" style={{ color: "#0F4F45" }}>
+				tukole
 			</Link>
 
 			<div className="flex items-center gap-2">
