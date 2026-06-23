@@ -13,8 +13,7 @@ export default function Faq() {
 					Frequently Asked Questions
 				</h2>
 				<p className="sm:text-base text-sm text-muted-foreground text-center">
-					Everything you need to know about the template. Find answers to common
-					questions.
+					Everything you need to know about Tukole.
 				</p>
 			</div>
 			<div className="w-full max-w-lg">
@@ -25,35 +24,64 @@ export default function Faq() {
 				>
 					<AccordionItem value="item-1">
 						<AccordionTrigger className="hover:no-underline">
-							What's included in this template?
+							Who is Tukole for?
 						</AccordionTrigger>
 						<AccordionContent className="text-muted-foreground">
-							This template is a comprehensive Next.js starter kit designed to
-							help you build your next project quickly and efficiently. It
-							includes a range of features and components that you can use to
-							get started, including a responsive design, a dark mode toggle,
-							and a form component.
+							Online sellers in Kampala who deliver products to customers —
+							clothing, food, electronics, anything. If you sell and you need
+							things delivered, Tukole is for you.
 						</AccordionContent>
 					</AccordionItem>
 					<AccordionItem value="item-2">
 						<AccordionTrigger className="hover:no-underline">
-							How do I get started with this template?
+							How is this different from calling a boda myself?
 						</AccordionTrigger>
 						<AccordionContent className="text-muted-foreground">
-							To get started with this template, you can clone the repository
-							and install the dependencies using npm or yarn. Once you have the
-							dependencies installed, you can start the development server using
-							npm run dev or yarn dev.
+							Tukole gives you trained, vetted riders assigned to your business,
+							live tracking on a map, photo proof of every delivery, and a saved
+							record of every customer — so you stop chasing deliveries and start
+							growing your shop.
 						</AccordionContent>
 					</AccordionItem>
 					<AccordionItem value="item-3">
 						<AccordionTrigger className="hover:no-underline">
-							How do I customize the template to my needs?
+							What does it cost?
 						</AccordionTrigger>
 						<AccordionContent className="text-muted-foreground">
-							You can customize the template to your needs by modifying the
-							components and pages in the src directory. You can also add your
-							own components and pages to the src directory.
+							Plans start at UGX 20,000/month plus a small percentage on item
+							value. We only make money when you make sales. Full pricing shared
+							at launch.
+						</AccordionContent>
+					</AccordionItem>
+					<AccordionItem value="item-4">
+						<AccordionTrigger className="hover:no-underline">
+							How does the address problem work?
+						</AccordionTrigger>
+						<AccordionContent className="text-muted-foreground">
+							Most of Kampala doesn&apos;t have street addresses. Your customer
+							drops a pin on a map and snaps a photo of their gate. Next time
+							anyone delivers to them, the location is already saved — no more
+							&ldquo;behind the petrol station, near the mango tree.&rdquo;
+						</AccordionContent>
+					</AccordionItem>
+					<AccordionItem value="item-5">
+						<AccordionTrigger className="hover:no-underline">
+							When does Tukole launch?
+						</AccordionTrigger>
+						<AccordionContent className="text-muted-foreground">
+							We&apos;re onboarding sellers in batches. Join the waitlist and
+							you&apos;ll be among the first invited, with free delivery credit
+							on your first day.
+						</AccordionContent>
+					</AccordionItem>
+					<AccordionItem value="item-6">
+						<AccordionTrigger className="hover:no-underline">
+							I&apos;m a boda rider — can I join?
+						</AccordionTrigger>
+						<AccordionContent className="text-muted-foreground">
+							Yes. Tukole partners with vetted riders for steady work and fair,
+							guaranteed pay. Join the waitlist and we&apos;ll reach out about
+							rider onboarding.
 						</AccordionContent>
 					</AccordionItem>
 				</Accordion>

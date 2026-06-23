@@ -23,7 +23,6 @@ export default function Demo({
 		setIsModalOpen(true);
 	};
 
-	// Handle escape key to close modal
 	useEffect(() => {
 		const handleEsc = (e: KeyboardEvent) => {
 			if (e.key === "Escape") {
@@ -38,7 +37,6 @@ export default function Demo({
 		};
 	}, []);
 
-	// Play video when modal opens
 	useEffect(() => {
 		if (isModalOpen && modalVideoRef.current) {
 			modalVideoRef.current.play();
@@ -47,6 +45,11 @@ export default function Demo({
 
 	return (
 		<div className="py-14 sm:px-0 px-4">
+			<div className="text-center mb-8">
+				<h2 className="text-2xl font-semibold text-foreground">
+					See how Tukole works.
+				</h2>
+			</div>
 			<div className="bg-muted/40 rounded-lg p-2 max-w-3xl mx-auto">
 				<div className="flex flex-row justify-start items-center gap-2 p-2">
 					<span className="relative flex h-4 w-4">
@@ -62,9 +65,7 @@ export default function Demo({
 				<div
 					className={`relative w-full max-w-3xl mx-auto rounded-lg overflow-hidden ${className}`}
 				>
-					{/* Glitch effect container */}
 					<div className="relative w-full aspect-video bg-black rounded-lg overflow-hidden">
-						{/* Video thumbnail */}
 						<video
 							ref={videoRef}
 							poster={thumbnailSrc}
@@ -81,16 +82,15 @@ export default function Demo({
 							Your browser does not support the video tag.
 						</video>
 						<span id="video-description" className="sr-only">
-							Demonstration video showing how the waitlist works. No captions
-							are necessary as this is primarily a visual demo with no speech.
+							Demonstration video showing how Tukole works for online sellers in
+							Kampala.
 						</span>
 
-						{/* Play button overlay */}
 						<div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-60">
-							{/* Play button */}
 							<motion.button
 								onClick={handlePlayClick}
-								className="relative w-16 h-16 bg-[#e5ff00] rounded-full flex items-center justify-center mb-4 z-10"
+								className="relative w-16 h-16 rounded-full flex items-center justify-center mb-4 z-10"
+								style={{ backgroundColor: "#F0531C" }}
 								whileHover={{ scale: 1.1 }}
 								whileTap={{ scale: 0.95 }}
 								aria-label="Play video"
@@ -99,21 +99,17 @@ export default function Demo({
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									viewBox="0 0 24 24"
-									fill="black"
+									fill="white"
 									className="w-8 h-8"
-									style={{ marginLeft: "2px" }} // Slight offset for the play icon
+									style={{ marginLeft: "2px" }}
 									aria-hidden="true"
 								>
 									<title>Play Icon</title>
 									<path d="M8 5v14l11-7z" />
 								</svg>
 							</motion.button>
-
-							{/* Text below the play button */}
-							<p className="text-gray-300 text-sm">See how wait works</p>
 						</div>
 
-						{/* CRT scan lines effect */}
 						<div
 							className="absolute inset-0 pointer-events-none"
 							style={{
@@ -123,18 +119,16 @@ export default function Demo({
 							}}
 						/>
 
-						{/* Chromatic aberration edges */}
 						<div
 							className="absolute inset-0 pointer-events-none opacity-70"
 							style={{
 								boxShadow:
-									"inset 0 0 50px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(255, 0, 0, 0.3), inset 0 0 20px rgba(0, 255, 0, 0.3), inset 0 0 20px rgba(0, 0, 255, 0.3)",
+									"inset 0 0 50px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(0, 0, 0, 0.3)",
 							}}
 						/>
 					</div>
 				</div>
 
-				{/* Video Modal */}
 				<AnimatePresence>
 					{isModalOpen && (
 						<motion.div
@@ -152,7 +146,6 @@ export default function Demo({
 								transition={{ type: "spring", damping: 25 }}
 								onClick={(e) => e.stopPropagation()}
 							>
-								{/* Close button */}
 								<button
 									className="absolute -top-10 right-0 text-white hover:text-gray-300 z-10"
 									onClick={() => setIsModalOpen(false)}
@@ -177,7 +170,6 @@ export default function Demo({
 									</svg>
 								</button>
 
-								{/* Video player */}
 								<div className="w-full aspect-video bg-black rounded-lg overflow-hidden">
 									<video
 										ref={modalVideoRef}
